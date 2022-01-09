@@ -1,68 +1,160 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #282c34;
-    color: #fff
+    background-color: #131313;
+    color: rgb(126, 252, 246);
+    font-family: "Titillium Web", sans-serif;
 }
-.app {
-    text-align: center;
 
+* {
+    outline: none !important;
 }
-.app-logo {
-    height: 15vmin;
+h1 {
+    margin: 0 !important;
+}
+a {
+    font-weight: bold;
+    color: rgb(126, 252, 246);
+    letter-spacing: 1px;
+}
+.center {
+    text-align: center;
+}
+.load {
+    text-align: center;
+}
+
+/* ------ weather ------- */
+
+.weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px 280px 40px;
+    min-height: 300px;
+}
+.weather_info {
+    width: 40%;
+    margin-right: 10%;
+}
+
+.weather_select {
+    border-bottom: 3px solid rgb(126, 252, 246);
+}
+.weather_select div {
+    background-color: transparent !important;
+    color: rgb(126, 252, 246) !important;
+    border: none !important;
+}
+.weather_box {
+    width: 50%;
+    background-color: #212121FF;
+    position: relative;
+}
+
+.weather_border_up {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 100%;
+    transform: rotate(180deg);
+}
+.weather_border_bottom {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+}
+
+
+.weather_data {
+    width: 290px;
+    margin: 0 auto;
+}
+.weather_city {
+    font-size: 50px;
+    margin: 0;
+}
+.weather_icon img {
+    width: 70px;
+}
+.weather_data_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.weather_text {
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+}
+.weather_text span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .weather {
+        flex-direction: column;
+    }
+    .weather_info {
+        width: 90%;
+        margin: 60px auto 60px auto;
+    }
+    .weather_box {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 568px) {
+    .weather {
+        padding: 40px 20px;
+    }
+    .weather_info, .weather_box {
+        width: 100%;
+    }
+}
+
+/* ------ base ------- */
+.base {
+    width: 100%;
+    background-color: green;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.base_border {
+    width: 100%;
+    position: absolute;
+    bottom: -38px;
+    left: 0;
+}
+.base_border_up {
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+.base_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.base_logo {
+    height: 80px;
     pointer-events: none;
 }
 @media (prefers-reduced-motion: no-preference) {
-    .app-logo {
+    .base_logo {
         animation: App-logo-spin infinite 20s linear;
     }
 }
-.app-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-.app-link {
-    color: #61dafb;
-}
-
-.main {
-    margin: 20px auto;
-}
-.text-message {
-    width: 600px;
-    margin: 10px auto;
-    padding: 10px 25px;
-    background-color: #707481;
-    font-size: 20px;
-    color: #ffffff;
-    border-radius: 10px;
-}
-.text-message span {
-    color: yellow;
-    font-weight: bold;
-}
-
-.btn {
-    cursor: pointer;
-    padding: 15px 25px;
-    width: 200px;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #61dafb;
-    color: #000;
-    font-weight: bold;
-    border: none;
-    outline: none;
-}
-.btn:hover {
-    opacity: .7;
-}
-
-
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
