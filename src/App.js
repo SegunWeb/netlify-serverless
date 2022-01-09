@@ -1,6 +1,5 @@
 import './style.css'
-import axios from "axios";
-import React, {useState} from "react";
+import React from "react";
 import Base from "./components/Base";
 import Weather from "./components/Weather";
 import border from "./border.svg";
@@ -8,15 +7,6 @@ import border from "./border.svg";
 
 
 function App() {
-
-    // const [value, setValue] = useState('')
-    //
-    // console.log(value)
-
-    // const fetchData = async () => {
-    //     const results = await axios.post('/.netlify/functions/helloName', {data: '1'})
-    // }
-
 
     return (
         <div>
